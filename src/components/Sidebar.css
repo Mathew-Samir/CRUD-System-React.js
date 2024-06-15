@@ -1,15 +1,17 @@
 .sidebar{
     height: 100%;
-    background: #f8f9fa;
+    /*background: #f8f9fa;*/
 }
-
+.sidebar{
+    margin-top: 46px;
+}
 .sidebar li{
     padding: 8px 8px;
     text-align: center;
 }
 .sidebar li a{
     text-decoration: none;
-    color: #528af3;
+    color: #969696;
 }
 .sidebar li a:hover {
     color: #363636;
