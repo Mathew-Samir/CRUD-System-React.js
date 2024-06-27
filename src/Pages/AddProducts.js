@@ -27,6 +27,10 @@ const AddProducts = () => {
       setError("This ID is duplicated. Please enter a non-duplicate ID.");
       return;
     }
+    if (id === "") {
+      setError("This ID is required.");
+      return;
+    }
 
     fetch('http://localhost:9000/posts', {
       method: 'POST',
@@ -49,7 +53,7 @@ const AddProducts = () => {
       <h1>Add New Product</h1>
       <form onSubmit={formSubmit}>
         <div className="mb-3">
-          <label htmlFor="productId" className="form-label">ID</label>
+          <label htmlFor="productId" className="form-label">ID <b style={{color: "red"}}>*</b></label>
           <input 
             type="text" 
             className="form-control" 
@@ -106,3 +110,4 @@ const AddProducts = () => {
 }
 
 export default AddProducts;
+
